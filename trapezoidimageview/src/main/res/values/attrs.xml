@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TrapezoidImageView">
+        <attr name="clipLeftTopGap" format="dimension"/>
+        <attr name="clipLeftBottomGap" format="dimension"/>
+        <attr name="clipRightTopGap" format="dimension"/>
+        <attr name="clipRightBottomGap" format="dimension"/>
+        <attr name="fillColor" format="integer"/>
+    </declare-styleable>
+
+</resources>
