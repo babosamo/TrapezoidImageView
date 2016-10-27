@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.babosamo.trapezoidimageview.TrapezoidImageView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FrameLayout mainFrame;
     private TrapezoidImageView trapezoidImageView;
@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mainFrame = (FrameLayout)findViewById(R.id.activity_main);
-        trapezoidImageView = (TrapezoidImageView)findViewById(R.id.trapezoidImage);
+        mainFrame = (FrameLayout) findViewById(R.id.activity_main);
+        trapezoidImageView = (TrapezoidImageView) findViewById(R.id.trapezoidImage);
         mainFrame.setOnClickListener(this);
         trapezoidImageView.setOnClickListener(this);
     }

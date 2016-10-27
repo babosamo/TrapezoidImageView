@@ -10,7 +10,6 @@ import android.graphics.RectF;
 import android.graphics.Region;
 import android.os.Build;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 
@@ -26,6 +25,7 @@ public class TrapezoidImageView extends ImageView {
     private int rightTopGap;
     private int rightBottomGap;
     private int fillColor;
+    private Region r;
 
     public TrapezoidImageView(Context context) {
         super(context);
@@ -63,14 +63,12 @@ public class TrapezoidImageView extends ImageView {
         invalidate();
     }
 
-    private Region r;
 
     @Override
     protected void onDraw(Canvas canvas) {
 
         int w = getWidth();
         int h = getHeight();
-
 
         Path path = new Path();
         path.moveTo(0, 0 + leftTopGap);
@@ -98,10 +96,9 @@ public class TrapezoidImageView extends ImageView {
         point.y = (int) event.getY();
 
         if (r.contains((int) point.x, (int) point.y)) {
-            Log.d(TAG, "dispatchTouchEvent in");
-
+//            Log.d(TAG, "dispatchTouchEvent in");
         } else {
-            Log.d(TAG, "dispatchTouchEvent out");
+//            Log.d(TAG, "dispatchTouchEvent out");
             return false;
         }
         return super.dispatchTouchEvent(event);
